@@ -39,7 +39,7 @@ public class DemoAppConfig implements WebMvcConfigurer {
     }
     
     @Override
-    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-        configurer.enable();
+    public void addViewControllers(ViewControllerRegistry registry) {
+          registry.addViewController("/").setViewName("index");
     }
 }
